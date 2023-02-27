@@ -1,7 +1,6 @@
-// console.log("Oi!! hi444g")
 import Fastify from 'fastify'
 import cors from '@fastify/cors'
-import { appRoutes } from './lib/routes'
+import { appRoutes } from './routes'
 
 const app = Fastify()
 
