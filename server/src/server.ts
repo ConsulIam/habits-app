@@ -8,6 +8,7 @@ app.register(cors)
 app.register(appRoutes)
 
 app.listen({
+  host: "0.0.0.0",
   port: 11337,
 }).then(() => {
   console.log('Consul HTTP Server isoled running!')
