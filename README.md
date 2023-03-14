@@ -5,27 +5,46 @@
 
 # Follow the next steps:
 
-**Clone repo**:
-````
-git clone https://github.com/ConsulIam/habits-app.git
-````
-**Install frontend dependencies**:
+**Clone the project repository**:
 ```
-cd habits-app/web
-npm install
+$ git clone https://github.com/ConsulIam/habits-app.git
+$ cd habits-app
 ```
 
-**Install backend dependencies and create database**:
+Follow the next steps to active the server and deploy the web and mobile habits-app.
+
+
+**Server**:
 ```
-cd ../server
-npm install
-npx prisma db push
+# Install backend dependencies
+$ cd server
+$ npm install
+
+# Create and populate database
+$ cp .env.example .env
+$ npx prisma migrate deploy
+$ npx prisma db seed
+$ npx prisma generate
+
+# Start server
+$ npm run dev
+```
+
+**Web**:
+```
+# Install frontend dependencies
+$ cd ../web
+$ npm install
+
+# Start web project
+$ npm run dev
 ```
 
 **Install mobile dependencies**:
 ```
-cd ../mobile
-npm install
-```
+$ cd ../mobile
+$ npm install
 
-Update the IP local (for test with mobile version)
+# Start web project
+# npx expo start
+```
