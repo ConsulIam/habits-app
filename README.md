@@ -22,9 +22,7 @@ $ npm install
 
 # Create and populate database
 $ cp .env.example .env
-$ npx prisma migrate deploy
-$ npx prisma db seed
-$ npx prisma generate
+$ npx prisma migrate reset -f
 
 # Start server
 $ npm run dev
